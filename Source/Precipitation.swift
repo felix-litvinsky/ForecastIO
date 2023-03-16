@@ -9,7 +9,7 @@
 import Foundation
 
 /// Types of precipitation.
-public enum Precipitation: String, Decodable {
+public enum Precipitation: String, Codable {
     
     /// Rainy.
     case rain = "rain"

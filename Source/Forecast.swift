@@ -10,10 +10,13 @@ import Foundation
 import CoreLocation
 
 /// The weather data for a location at a specific time.
-public struct Forecast: Decodable {
+public struct Forecast: Codable {
     
-    /// The requested location.
-    public let location: CLLocationCoordinate2D
+    /// The requested location's latitude.
+    public let latitude: Double
+    
+    /// The requested location's longitude..
+    public let longitude: Double
     
     /// The IANA timezone name for the requested location (e.g. "America/New_York"). Rely on local user settings over this property.
     public let timezone: String
@@ -72,9 +75,8 @@ public struct Forecast: Decodable {
         self.minutely = try container.decodeIfPresent(DataBlock.self, forKey: .minutely)
         self.hourly = try container.decodeIfPresent(DataBlock.self, forKey: .hourly)
         self.daily = try container.decodeIfPresent(DataBlock.self, forKey: .daily)
-        let lat = try container.decode(Double.self, forKey: .latitude)
-        let lon = try container.decode(Double.self, forKey: .longitude)
-        self.location = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+        self.latitude = try container.decode(Double.self, forKey: .latitude)
+        self.longitude = try container.decode(Double.self, forKey: .longitude)
     }
     
     /// Map `Forecast`'s properties to JSON keys.

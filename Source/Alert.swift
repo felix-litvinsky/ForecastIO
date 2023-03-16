@@ -9,7 +9,7 @@
 import Foundation
 
 /// A severe weather warning issued for a location by a governmental authority (consult the Dark Sky API documentation for a full list).
-public struct Alert: Decodable {
+public struct Alert: Codable {
     
     /// A short text summary of the `Alert`.
     public let title: String
@@ -33,7 +33,7 @@ public struct Alert: Decodable {
     public let severity: Severity
     
     /// Severity categories of `Alert`s.
-    public enum Severity: String, Decodable {
+    public enum Severity: String, Codable {
         
         /// `advisory` `Alert`s tell an individual to be aware of potentially severe weather.
         case advisory = "advisory"

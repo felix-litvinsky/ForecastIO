@@ -9,7 +9,7 @@
 import Foundation
 
 /// Weather data for a specific location and time.
-public struct DataPoint: Decodable {
+public struct DataPoint: Codable {
 
     /// The time at which this `DataPoint` begins. `minutely` `DataPoint`s are always aligned to the top of the minute, `hourly` `DataPoint`s to the top of the hour, and `daily` `DataPoint`s to midnight of the day, all according to the local timezone.
     public let time: Date

@@ -9,7 +9,7 @@
 import Foundation
 
 /// A class that contains various metadata information related to a `Forecast` request.
-public struct Flag: Decodable {
+public struct Flag: Codable {
     
     /// The presence of this property indicates that the Dark Sky data source supports the `Forecast`'s location, but a temporary error (such as a radar station being down for maintenance) has made the data unavailable.
     public let darkSkyUnavailable: String?

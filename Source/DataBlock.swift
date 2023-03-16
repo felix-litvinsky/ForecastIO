@@ -9,7 +9,7 @@
 import Foundation
 
 /// Weather data for a specific location over a period of time.
-public struct DataBlock: Decodable {
+public struct DataBlock: Codable {
     
     /// A human-readable text summary.
     public let summary: String?
