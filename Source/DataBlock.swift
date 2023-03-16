@@ -18,6 +18,6 @@ public struct DataBlock: Codable {
     public let icon: Icon?
     
     /// `DataPoint`s ordered by time, which describe the weather conditions at the requested location over time.
-    public let data: [DataPoint]
+    public var data: [DataPoint]
     
 }

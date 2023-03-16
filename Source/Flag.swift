@@ -21,7 +21,7 @@ public struct Flag: Codable {
     public let sources: [String]
     
     /// The presence of this property indicates which units were used for the data in this request. `US` units are default.
-    public let units: Units
+    public var units: Units
     
     /// Whether to use apparent or actual temperatures. Defaults to true.
     public var feelsLike: Bool = true
