@@ -25,6 +25,14 @@ public struct Flag: Codable {
     
     /// Whether to use apparent or actual temperatures. Defaults to true.
     public var feelsLike: Bool = true
+    
+    public init(units: Units, feelsLike: Bool = true) {
+        self.units = units
+        self.feelsLike = feelsLike
+        self.darkSkyUnavailable = nil
+        self.nearestStation = nil
+        self.sources = []
+    }
 
     /// Map `Flag`'s properties to JSON keys.
     private enum CodingKeys: String, CodingKey {
