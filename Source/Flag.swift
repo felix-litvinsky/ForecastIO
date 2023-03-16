@@ -22,6 +22,9 @@ public struct Flag: Decodable {
     
     /// The presence of this property indicates which units were used for the data in this request. `US` units are default.
     public let units: Units
+    
+    /// Whether to use apparent or actual temperatures. Defaults to true.
+    public var feelsLike: Bool = true
 
     /// Map `Flag`'s properties to JSON keys.
     private enum CodingKeys: String, CodingKey {
