@@ -28,16 +28,16 @@ public struct Forecast: Codable {
     public var flags: Flag?
     
     /// The current weather conditions at the requested location.
-    public let currently: DataPoint?
+    public var currently: DataPoint?
     
     /// The minute-by-minute weather conditions at the requested location for the next hour aligned to the nearest minute.
-    public let minutely: DataBlock?
+    public var minutely: DataBlock?
     
     /// The hourly weather conditions at the requested location for the next two days aligned to the top of the hour.
-    public let hourly: DataBlock?
+    public var hourly: DataBlock?
     
     /// The daily weather conditions at the requested location for the next week aligned to midnight of the day.
-    public let daily: DataBlock?
+    public var daily: DataBlock?
     
     /// Data fields associated with a `Forecast`.
     public enum Field: String, Decodable {
