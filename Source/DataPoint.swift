@@ -12,7 +12,7 @@ import Foundation
 public class DataPoint: Codable {
 
     /// The time at which this `DataPoint` begins. `minutely` `DataPoint`s are always aligned to the top of the minute, `hourly` `DataPoint`s to the top of the hour, and `daily` `DataPoint`s to midnight of the day, all according to the local timezone.
-    public let time: Date
+    public let time: Date?
     
     /// A human-readable text summary of this `DataPoint`.
     public let summary: String?
