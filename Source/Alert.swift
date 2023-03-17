@@ -15,7 +15,7 @@ public struct Alert: Codable {
     public let title: String
     
     /// The time at which this alert was issued.
-    public let time: Date
+    public let time: Date?
     
     /// The time at which the `Alert` will cease to be valid.
     public let expires: Date?
@@ -24,13 +24,13 @@ public struct Alert: Codable {
     public let description: String
     
     /// An HTTP(S) URI that contains detailed information about the `Alert`.
-    public let uri: URL
+    public let uri: URL?
     
     /// Regions covered by the `Alert`.
-    public let regions: [String]
+    public let regions: [String]?
     
     /// The severity of the `Alert`.
-    public let severity: Severity
+    public let severity: Severity?
     
     /// Severity categories of `Alert`s.
     public enum Severity: String, Codable {
